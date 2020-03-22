@@ -1,0 +1,9 @@
+use rxtest
+db.createCollection("user", { } )
+db.createCollection("object", { } )
+db.createCollection("currency", { } )
+db.currency.insertOne({_id : "rub", value : 1})
+db.currency.insertOne({_id : "eur", value : 82.91})
+db.currency.insertOne({_id : "dollar", value : 74.38})
+db.currency.insertOne({_id : "euro", value : 82.91})
+
