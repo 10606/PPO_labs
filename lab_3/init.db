@@ -1,0 +1,23 @@
+create table abonement_info
+(
+    abonement_id int primary key,
+    client_name varchar(100),
+    use_to timestamp
+);
+
+create table abonement_continue
+(
+    operation_id serial primary key,
+    abonement_id int,
+    use_to timestamp,
+    foreign key (abonement_id) references abonement_info(abonement_id)
+);
+
+
+create table enter_info
+(
+    operation_id serial primary key,
+    abonement_id int,
+    time timestamp,
+    foreign key (abonement_id) references abonement_info(abonement_id)
+);
